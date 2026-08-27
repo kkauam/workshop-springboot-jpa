@@ -1,6 +1,6 @@
 package com.educandoweb.course.resources;
 
-import com.educandoweb.course.entity.Users;
+import com.educandoweb.course.entity.User;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,8 +12,8 @@ public class UsersResources {
 
 
     @GetMapping
-    public ResponseEntity<Users> findALL() {
-        Users user = new Users(1L, "Maria", "Maria@gmail.com", "123456", "123456789");
+    public ResponseEntity<User> findALL() {
+        User user = new User(1L, "Maria", "Maria@gmail.com", "123456", "123456789");
         return ResponseEntity.ok().body(user);
     }
 }

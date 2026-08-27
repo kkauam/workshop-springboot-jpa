@@ -4,7 +4,7 @@ import java.io.Serial;
 import java.io.Serializable;
 import java.util.Objects;
 
-public class Users implements Serializable {
+public class User implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
     private long id;
@@ -13,7 +13,7 @@ public class Users implements Serializable {
     private String password;
     private String phone;
 
-    public Users(long id, String name, String email, String password, String phone) {
+    public User(long id, String name, String email, String password, String phone) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -64,7 +64,7 @@ public class Users implements Serializable {
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
-        Users users = (Users) o;
+        User users = (User) o;
         return getId() == users.getId();
     }
 
